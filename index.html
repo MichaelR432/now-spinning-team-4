@@ -7,6 +7,8 @@
     <title>Spotify New Releases</title>
     <link rel="stylesheet" src="./assets/css/stylesheet.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://apis.google.com/js/api.js" async defer></script>  
+<script src="./assets/js/script.js"></script> 
 </head>
 
 <body>
@@ -150,12 +152,16 @@
           </div>
         </div>
       </div>
-  
+      
+      <section class="youtube" id="youtube-playlist">
+        
+      </section>
 </body>
 
 <footer class="footer">
     Made by The Fantastic Four! 
 </footer>
 
-<script src="./assets/js/index.js"></script>
+<button onclick="authenticate().then(loadClient)">authorize and load</button>
+<button onclick="execute()">execute</button>
 </html>
