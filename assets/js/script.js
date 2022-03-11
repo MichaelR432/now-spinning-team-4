@@ -49,8 +49,8 @@ fetch(requestUrl)
 		return response.musicVideo
 	})
 
-.catch(err => {
-	console.error(err);
+.catch((e) => {
+	console.log(e);
 });
 
 
