@@ -13,15 +13,14 @@ fetch(requestUrl)
 		return response.musicVideo
 	})
 
-.catch(err => {
-	console.error(err);
+.catch((e) => {
+	console.log(e);
 });
 
-//var displayVideo = function() {
-//		document.getElementById("#music-video")
-//	return;
-//}
- //look at append child 
- // var to display video
- // add = to line 17 with variable to display video
- // probably need to do a createElementById for line 17
+function displayMusicVideo(data) {
+	const musicVideo = data; 
+	const musicVideoDiv = document.getElementById("music-video");
+	const heading = document.createElement("p");
+	heading.innerHTML = musicVideo;
+	musicVideoDiv.appendChild(heading);
+}
