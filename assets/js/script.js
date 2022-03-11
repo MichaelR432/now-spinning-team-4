@@ -3,25 +3,22 @@ var requestUrl = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%
 var youtubeContainerEl = document.querySelector("#youtube-container");
 var musicVideo = document.querySelector("#music-video");
 
-fetch("requestUrl"), {
-	"method": "get",
-	"headers": {
-		"x-rapidapi-host": "ytstream-download-youtube-videos.p.rapidapi.com",
-		"x-rapidapi-key": "980d637cdbmsh81ca7e280815ecfp1293afjsna174cb76791a"
-	}
-}
-.then(response => response.json(){
-	console.log(response);
-})
+fetch(requestUrl, {
+}).then(response => response.json())
+	.then((result) => {
+		console.log(result);
+	})
+
 .catch(err => {
 	console.error(err);
 });
 
-var displayVideo = function(video, musicVideo) {
-		document.getElementById("music-video").innerHTML = tab;
+var displayVideo = function() {
+		document.getElementById("#music-video").innerHTML
 	return;
 }
-
-
-//Authorization: Bearer [YOUR_ACCESS_TOKEN]
-//Accept: application/json
+ //look at append child 
+ // var to display video
+ // add = to line 17 with variable to display video
+ // probably need to do a createElementById for line 17
+ 
