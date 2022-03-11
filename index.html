@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -169,14 +169,27 @@
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
+      <!-- Card -->
+      <div class="w-60 p-2 bg-white rounded-xl transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
+        <!-- Image -->
+        <img class="h-40 object-cover rounded-xl" h-40 object-cover rounded-xl src="assets/images/youtube-logo-images-free-download-by-freepnglogoscom-background-youtube-logo-first-aid-symbol-trademark-triangle-transparent-png-2535459.png" alt="">
+        <div class="p-2">
+       </div>
+       <!-- CTA -->
+        <div class="m-2">
+           <a role='button' href='#' class="text-white bg-red-600 px-3 py-1 rounded-lg hover:bg-red-700">Watch Now<span id="music-video"></span></a>
+        </div>
+      </div>
       
       <div>
-        <h3>Music Videos<span id="music-video"></span></h3>
-        <div class="youtube-container"></div>
+        <!--<h3 class="text-white bg-">Music Videos<span id="music-video"></span></h3>-->
+        <!--<a role='button' href='#' id="music-video" class="text-white youtube-container bg-purple-600 px-3 py-1 rounded-md hover:bg-purple-700">Music Videos</a>
+        <div class="youtube-container"></div>-->
       </div>
->>>>>>> 40b56b402afd145fe7d22df651b924f93f1e829b
+
+      <button onclick="authenticate().then(loadClient)">authorize and load</button>
+      <button onclick="execute()" class="text">execute</button>
+  </nav>    
 </body>
 
 <!--<footer class="footer mt-1 text-lg font-medium text-gray-900 md:text-center">-->
@@ -196,5 +209,5 @@
 </footer>
 
 <button onclick="authenticate().then(loadClient)">authorize and load</button>
-<button onclick="execute()">execute</button>
+<button onclick="execute()" class="text">execute</button>
 </html>
