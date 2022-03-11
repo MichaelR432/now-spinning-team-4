@@ -1,9 +1,9 @@
 const api_url ="https://spotfiy-charts.p.rapidapi.com/?type=regional&country=us&recurrence=weekly&date=latest" //Spotify Charts API//
 fetch(api_url, {
 	"method": "GET",
-	"headers": {
+    "headers": {
 		"x-rapidapi-host": "spotfiy-charts.p.rapidapi.com",
-		"x-rapidapi-key": "4f0d91789amshc2b344d8971cadbp19fd34jsn5ebdc8770c89"
+		"x-rapidapi-key": "8e2f52cc90mshf376dfdd4afaf94p1d2968jsn77916a99b0cd"
 	}
 })
 .then(response => {
@@ -33,3 +33,4 @@ fetch(api_url, {
     document.getElementById('artist8').textContent = data.content[7].artists;
     document.getElementById('track8').textContent = data.content[7].track_title;
 })
+

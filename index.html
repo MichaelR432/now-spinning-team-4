@@ -60,7 +60,7 @@
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 hidden sm:block sm:ml-6">
               <button type="button" class="bg-green-600 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                 <!-- <span class="sr-only">View notifications</span> -->
-                <a href="#" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" traget="_blank">New Music</a>
+                <a href="#" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">New Music</a>
                 <a href="#" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Section</a>
                 <a href="#" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About Us</a>
 
@@ -142,32 +142,38 @@
               <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8 hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
                 <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg" alt="album cover." class="w-full h-full object-center object-cover group-hover:opacity-75">
               </div>
-              <h3 id="track6" class="mt-4 text-sm text-gray-700">Song 6</h3>
-              <p id="artist6" class="mt-1 text-lg font-medium text-gray-900">Artist</p>
+              <h3 id="track6" class="mt-4 text-sm text-gray-700"></h3>
+              <p id="artist6" class="mt-1 text-lg font-medium text-gray-900"></p>
             </a>
 
             <a href="#" class="group">
               <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8 hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
                 <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg" alt="album cover." class="w-full h-full object-center object-cover group-hover:opacity-75">
               </div>
-              <h3 id="track7" class="mt-4 text-sm text-gray-700">Song 7</h3>
-              <p id="artist7" class="mt-1 text-lg font-medium text-gray-900">Artist</p>
+              <h3 id="track7" class="mt-4 text-sm text-gray-700"></h3>
+              <p id="artist7" class="mt-1 text-lg font-medium text-gray-900"></p>
             </a>
 
             <a href="#" class="group">
               <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8 hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
                 <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg" alt="album cover." class="w-full h-full object-center object-cover group-hover:opacity-75">
               </div>
-              <h3 id="track8" class="mt-4 text-sm text-gray-700">Song 8</h3>
-              <p id="artist8" class="mt-1 text-lg font-medium text-gray-900">Artist</p>
+              <h3 id="track8" class="mt-4 text-sm text-gray-700"></h3>
+              <p id="artist8" class="mt-1 text-lg font-medium text-gray-900"></p>
             </a>
 
             <a href="#" class="group">
                 <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8 hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
                   <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg" alt="album cover." class="w-full h-full object-center object-cover group-hover:opacity-75">
                 </div>
-                <h3 id="" class="mt-4 text-sm text-gray-700">View More</h3>
-                <button type="btn">Cool!</button>
+                <h3 id="" class="mt-4 text-sm text-gray-700">Don't see a song that interests you?</h3>
+                <button id="moreArtists" onClick="topTracks()">Discover</button>
+                <script>
+                    function topTracks() {
+                        window.open('top.html','Top 50 Tracks','width=200,height=200');
+                    }
+                </script>
+
               </a>
       
             <!-- More music... -->
