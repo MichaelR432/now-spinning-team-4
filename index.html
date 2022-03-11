@@ -7,6 +7,8 @@
     <title>Now Spinning</title>
     <link rel="stylesheet" src="./assets/css/stylesheet.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://apis.google.com/js/api.js" async defer></script>  
+<script src="./assets/js/script.js"></script> 
 </head>
 
 <body>
@@ -167,6 +169,14 @@
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+      
+      <div>
+        <h3>Music Videos<span id="music-video"></span></h3>
+        <div class="youtube-container"></div>
+      </div>
+>>>>>>> 40b56b402afd145fe7d22df651b924f93f1e829b
 </body>
 
 <!--<footer class="footer mt-1 text-lg font-medium text-gray-900 md:text-center">-->
@@ -185,5 +195,6 @@
    <p>  Michael Ramos, Sarah Powell, Michael Phan, Hector Palacios</p>-->
 </footer>
 
-<script src="./assets/js/index.js"></script>
+<button onclick="authenticate().then(loadClient)">authorize and load</button>
+<button onclick="execute()">execute</button>
 </html>
