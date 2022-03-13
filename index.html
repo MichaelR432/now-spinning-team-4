@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -183,9 +183,22 @@
           </div>
         </div>
       </div>
+
       
-      <div id="music-video">Music Videos</div>
-      <p>hello</p>
+      <div>
+        <!--<h3 class="text-white bg-">Music Videos<span id="music-video"></span></h3>-->
+        <!--<a role='button' href='#' id="music-video" class="text-white youtube-container bg-purple-600 px-3 py-1 rounded-md hover:bg-purple-700">Music Videos</a>
+        <div class="youtube-container"></div>-->
+      </div>
+
+      <!--<button onclick="authenticate().then(loadClient)">authorize and load</button> -->
+      <!-- <button onclick="execute()" class="text">execute</button> -->
+  </nav>    
+      
+      <div id="music-video"></div>
+      <iframe id="ytplayer" type="text/html" width="640" height="360"
+  src="https://www.youtube.com/embed/ubnDMTUui1Y?autoplay=1&origin=http://example.com"
+  frameborder="0"></iframe>
 </body>
 
 <!--<footer class="footer mt-1 text-lg font-medium text-gray-900 md:text-center">-->
@@ -203,4 +216,7 @@
    <p> Made by The Fantastic Four! </p>
    <p>  Michael Ramos, Sarah Powell, Michael Phan, Hector Palacios</p>-->
 </footer>
+
+<button onclick="authenticate().then(loadClient)">authorize and load</button>
+<button onclick="execute()" class="text">execute</button>
 </html>
