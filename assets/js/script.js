@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-=======
 const api_url ="https://spotfiy-charts.p.rapidapi.com/?type=regional&country=us&recurrence=weekly&date=latest" //Spotify Charts API//
 fetch(api_url, {
 	"method": "GET",
-    "headers": {
+	"headers": {
 		"x-rapidapi-host": "spotfiy-charts.p.rapidapi.com",
-		"x-rapidapi-key": "8e2f52cc90mshf376dfdd4afaf94p1d2968jsn77916a99b0cd"
+		"x-rapidapi-key": "669c7263bfmsh21d9c4adb08f748p1ed1b7jsn480ba42fbc10"
 	}
 })
 .then(response => {
@@ -37,32 +35,21 @@ fetch(api_url, {
 })
 
 var APIkey = "AIzaSyA2ChTeollJqbj7hUF54Y88r9RysfXB2xc";
-const requestUrl = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=nWr4r-3bHBc&key=AIzaSyA2ChTeollJqbj7hUF54Y88r9RysfXB2xc";
+const requestUrl = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=ubnDMTUui1Y&key=AIzaSyA2ChTeollJqbj7hUF54Y88r9RysfXB2xc";
 var youtubeContainerEl = document.querySelector("#youtube-container");
 const musicVideo = document.querySelector("#music-video");
 
 fetch(requestUrl)
-.then(response => response.json())
-	.then((result) => {
+	.then(response => response.json())
+	.then(result => {
 		console.log(result);
-		if(!response.ok) {
-			
+		if (!response.ok) {
+
 		}
-		return response.musicVideo
+		return result.musicVideo
 	})
 
-.catch((e) => {
-	console.log(e);
-});
+	.catch((e) => {
+		console.log(e);
+	});
 
-
-
-//var displayVideo = function() {
-//		document.getElementById("#music-video")
-//	return;
-//}
- //look at append child 
- // var to display video
- // add = to line 17 with variable to display video
- // probably need to do a createElementById for line 17
->>>>>>> 72c95694ceaa2f3653047ab8563cbe77d0e93755
