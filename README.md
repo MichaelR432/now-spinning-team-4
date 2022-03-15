@@ -8,3 +8,8 @@
     - Javascript 
     - Spotify API
     - YouTube API 
+    
+    
+    
+git@github.com:MichaelR432/now-spinning-team-4.git
+<img width="1440" alt="Screen Shot 2022-03-14 at 7 37 48 PM" src="https://user-images.githubusercontent.com/95262020/158294797-509024ee-95ab-4ce1-bbf9-04b8f373d046.png">
