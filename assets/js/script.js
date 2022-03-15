@@ -1,4 +1,4 @@
-const api_url ="https://spotfiy-charts.p.rapidapi.com/?type=regional&country=us&recurrence=weekly&date=latest" //Spotify Charts API//
+const api_url ="https://spotify-charts.p.rapidapi.com/?type=regional&country=us&recurrence=weekly&date=latest" //Spotify Charts API//
 fetch(api_url, {
 	"method": "GET",
 	"headers": {
@@ -52,4 +52,3 @@ fetch(requestUrl)
 	.catch((e) => {
 		console.log(e);
 	});
-
