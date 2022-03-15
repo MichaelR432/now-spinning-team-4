@@ -1,4 +1,4 @@
-const api_url ="https://spotfiy-charts.p.rapidapi.com/?type=regional&country=us&recurrence=weekly&date=latest" //Spotify Charts API//
+const api_url ="https://spotify-charts.p.rapidapi.com/?type=regional&country=us&recurrence=weekly&date=latest" //Spotify Charts API//
 fetch(api_url, {
 	"method": "GET",
 	"headers": {
@@ -40,8 +40,10 @@ var youtubeContainerEl = document.querySelector("#youtube-container");
 const musicVideo = document.querySelector("#music-video");
 
 fetch(requestUrl)
-	.then(response => response.json())
-	.then(result => {
+	.then (function (response) {
+		return response.json();
+	}) 
+	.then(function (result) {
 		console.log(result);
 		if (!response.ok) {
 
@@ -52,5 +54,3 @@ fetch(requestUrl)
 	.catch((e) => {
 		console.log(e);
 	});
-
-
