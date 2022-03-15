@@ -40,8 +40,10 @@ var youtubeContainerEl = document.querySelector("#youtube-container");
 const musicVideo = document.querySelector("#music-video");
 
 fetch(requestUrl)
-	.then(response => response.json())
-	.then(result => {
+	.then (function (response) {
+		return response.json();
+	}) 
+	.then(function (result) {
 		console.log(result);
 		if (!response.ok) {
 
