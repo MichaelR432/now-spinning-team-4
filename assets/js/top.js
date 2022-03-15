@@ -10,6 +10,10 @@ fetch(api_url, {
     console.log(response);
     return response.json();
 })
+
+//create function to display top five songs in storage and on website--module
+
+//creat function for pop up for 10, 15, 50 songs, etc.
 .then(data => {
     console.log(data);
     var body = document.body;
