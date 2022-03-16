@@ -50,6 +50,7 @@ fetch(api_url, {
     /*for (var i = 0; i < 50; i ++) {
         var x = JSON.stringify(data.content[i].artists);
         var y = JSON.stringify(data.content[i].track_title);
+    
         console.log(x.length);
         console.log(x);
         console.log(y);
