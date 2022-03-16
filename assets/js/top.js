@@ -10,6 +10,7 @@ fetch(api_url, {
     console.log(response);
     return response.json();
 })
+//Top 50 weekly songs
 .then(data => {
     console.log(data);
     var body = document.body;
