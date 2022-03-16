@@ -161,13 +161,14 @@ var searchGenre = () => {
 	    console.error(err);
     })
     .then(data => {
+        var a1 = Math.floor(Math.random() * 10)
         console.log(data);
         var currentCard = $(".currentCard").append("<div>").addClass("card-body");
         currentCard.empty();
         var currentName = currentCard.append("<p>");
         currentCard.append(currentName);
         var currentTrack = currentName.append("<p>");
-        currentTrack.append("<p>" + "Track Name: " + JSON.stringify(data.tracks.items[0].data.name) + " by: " + JSON.stringify(data.tracks.items[0].data.artists.items[0].profile.name) + "</p>");
+        currentTrack.append("<p>" + "Track Name: " + JSON.stringify(data.tracks.items[a1].data.name) + " by: " + JSON.stringify(data.tracks.items[a1].data.artists.items[0].profile.name) + "</p>");
     })
 }
 $('.searchBtn').on('click', (event) => {
