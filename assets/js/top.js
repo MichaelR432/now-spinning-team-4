@@ -1,16 +1,19 @@
-const api_url ="https://spotfiy-charts.p.rapidapi.com/?type=regional&country=us&recurrence=weekly&date=latest" //Spotify Charts API//
+const api_url ="https://spotfiy-charts.p.rapidapi.com/?type=regional&country=global&recurrence=daily&date=latest" //Spotify Charts API//
 fetch(api_url, {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "spotfiy-charts.p.rapidapi.com",
-		"x-rapidapi-key": "669c7263bfmsh21d9c4adb08f748p1ed1b7jsn480ba42fbc10"
+		"x-rapidapi-key": "8e2f52cc90mshf376dfdd4afaf94p1d2968jsn77916a99b0cd"
 	}
 })
 .then(response => {
     console.log(response);
     return response.json();
 })
-//Top 50 weekly songs
+
+//create function to display top five songs in storage and on website--module
+
+//creat function for pop up for 10, 15, 50 songs, etc.
 .then(data => {
     console.log(data);
     var body = document.body;
