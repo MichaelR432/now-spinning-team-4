@@ -1,9 +1,9 @@
-const api_url ="https://spotify-charts.p.rapidapi.com/?type=regional&country=us&recurrence=weekly&date=latest" //Spotify Charts API//
+const api_url ="https://spotfiy-charts.p.rapidapi.com/?type=regional&country=global&recurrence=daily&date=latest" //Spotify Charts API//
 fetch(api_url, {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "spotfiy-charts.p.rapidapi.com",
-		"x-rapidapi-key": "669c7263bfmsh21d9c4adb08f748p1ed1b7jsn480ba42fbc10"
+		"x-rapidapi-key": "8e2f52cc90mshf376dfdd4afaf94p1d2968jsn77916a99b0cd"
 	}
 })
 .then(response => {
@@ -31,7 +31,30 @@ fetch(api_url, {
     document.getElementById('artist7').textContent = data.content[6].artists;
     document.getElementById('track7').textContent = data.content[6].track_title;
     document.getElementById('artist8').textContent = data.content[7].artists;
-    document.getElementById('track8').textContent = data.content[7].track_title;
+
+    var arr = [];
+    for (var i = 0; i < 5; i++) {
+      arr.push(Math.floor(Math.random() * 51))
+      localStorage.setItem('numbers', JSON.stringify(arr));
+    }
+    console.log(arr);
+    var storedNums = JSON.parse(localStorage.getItem("numbers"));
+    console.log(storedNums.length);
+    for (i = 0; i < storedNums.length; i++) {
+        var x = storedNums[i]
+        console.log(storedNums[i]);
+        console.log(data.content[x].artists);
+        document.getElementById('moreArtists').textContent= data.content[i].artists;
+    }
+    
+    /*for (var i = 0; i < 50; i ++) {
+        var x = JSON.stringify(data.content[i].artists);
+        var y = JSON.stringify(data.content[i].track_title);
+        console.log(x.length);
+        console.log(x);
+        console.log(y);
+
+    }*/
 })
 
 var APIkey = "AIzaSyA2ChTeollJqbj7hUF54Y88r9RysfXB2xc";
