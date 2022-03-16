@@ -1,9 +1,9 @@
-const api_url ="https://spotfiy-charts.p.rapidapi.com/?type=regional&country=global&recurrence=daily&date=latest" //Spotify Charts API//
+const api_url ="https://spotfiy-charts.p.rapidapi.com/?type=regional&country=us&recurrence=weekly&date=latest" //Spotify Charts API//
 fetch(api_url, {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "spotfiy-charts.p.rapidapi.com",
-		"x-rapidapi-key": "8e2f52cc90mshf376dfdd4afaf94p1d2968jsn77916a99b0cd"
+		"x-rapidapi-key": "c313de1ad3msh4602fa283a24682p189403jsn953e0897f524"
 	}
 })
 .then(response => {
@@ -17,7 +17,7 @@ fetch(api_url, {
 .then(data => {
     console.log(data);
     var body = document.body;
-    var infoEl = document.createElement("div");
+    var infoEl = document.getElementById("songList");
     var listEl = document.createElement('ol');
     var li1 = document.createElement("li");
     var li2 = document.createElement("li");
@@ -119,7 +119,6 @@ fetch(api_url, {
     li48.textContent = data.content[48].track_title + ' by ' + data.content[48].artists;
     li49.textContent = data.content[49].track_title + ' by ' + data.content[49].artists;
     li50.textContent = data.content[50].track_title + ' by ' + data.content[50].artists;
-    body.appendChild(infoEl);
     infoEl.appendChild(listEl);
     listEl.appendChild(li1);
     listEl.appendChild(li2);
