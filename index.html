@@ -5,25 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Now Spinning</title>
-    <link rel="icon" type="image/x-icon" href="./assets/images/android-chrome-192x192.png">
     <link rel="stylesheet" src="./assets/css/stylesheet.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://apis.google.com/js/api.js" async defer></script>  
+<script src="./assets/js/script.js"></script> 
 </head>
 
 <body>
-<!-- Nav Bar -->
-  <nav class="bg-green-600">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-      <div class="relative flex items-center justify-between h-16">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-          <!-- Mobile menu button-->
-          <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-            <span class="sr-only">Open main menu
-
-            </span>
+    <!-- Nav Bar -->
+    <nav class="bg-green-600">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div class="relative flex items-center justify-between h-16">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
                 <!--
                   Icon when menu is closed.
       
@@ -31,9 +27,9 @@
       
                   Menu open: "hidden", Menu closed: "block"
                 -->
-            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+                <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
                 <!--
                   Icon when menu is open.
       
@@ -198,12 +194,12 @@
                     <h5 class="text-xl font-medium leading-normal text-gray-800" id="exampleModalScrollableLabel">
                       Modal title
                     </h5>
-                    <button type="button"
+                    <button id="moreArtists" onClick="topTracks()" type="button"
                       class="btn-close box-content w-4 h-4 p-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
                       data-bs-dismiss="modal" aria-label="Close">
                     </button>
                   </div>
-                  <div class="modal-body relative p-4">
+                  <div id="songlist" class="modal-body relative p-4">
                     <p>This is some placeholder content to show the scrolling behavior for modals. We use repeated line breaks to demonstrate how content can exceed minimum inner height, thereby showing inner scrolling. When content becomes longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.</p>
                     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                     <p>This content should appear at the bottom after you scroll.</p>
@@ -243,26 +239,25 @@
 
       <!--<button onclick="authenticate().then(loadClient)">authorize and load</button> -->
       <!-- <button onclick="execute()" class="text">execute</button> -->
+  </nav>    
       
-      
-      <div class="flex-1 flex items-center justify-center sm:items-stretch pb-10" id="music-video">
-      <iframe id="ytplayer" type="text/html" width="640" height="360"
-     src="https://www.youtube.com/embed/ubnDMTUui1Y?autoplay=1&origin=http://example.com"
-  frameborder="0"></iframe>
-      </div>
-      
-
+  <div class="flex-1 flex items-center justify-center sm:items-stretch pb-10" id="music-video">
+    <iframe id="ytplayer" type="text/html" width="640" height="360"
+    src="https://www.youtube.com/embed/ubnDMTUui1Y?autoplay=1&origin=http://example.com"
+    frameborder="0"></iframe>
+  </div>
+</body>
 
 <!--<footer class="footer mt-1 text-lg font-medium text-gray-900 md:text-center">-->
-<footer id="about-us" class="w-full bg-green-600 max-w-container mx-auto border-t py-10 text-center text-sm text-white sm:flex sm:items-center sm:justify-center">
+<footer class="w-full bg-green-600 max-w-container mx-auto border-t py-10 text-center text-sm text-white sm:flex sm:items-center sm:justify-center">
     <!--<p>© 2022 Tailwind Labs Inc. All rights reserved.</p>-->
-  <p class="mt-2 sm:border-l"></p>
-  <p><a class="hover:text-teal-600" href="mailto:Example@gmail.com/">Example@gmail.com </a><br/>
+    <p class="mt-2 sm:border-l"></p>
+    <p><a class="hover:text-teal-600" href="mailto:Example@gmail.com/">Example@gmail.com </a><br/>
       Made by The Fantastic Four! : <br/>
        Michael Ramos, Sarah Powell, Michael Phan, Hector Palacios<br/></p>
-  <p class="mt-2 sm:mt-0 sm:ml-3 sm:border-l sm:border-white sm:pl-3">
-    <a class="hover:text-teal-600" href="/privacy-policy">Privacy Policy</a>
-  </p>
+    <p class="mt-2 sm:mt-0 sm:ml-3 sm:border-l sm:border-white sm:pl-3">
+      <a class="hover:text-teal-600" href="/privacy-policy">Privacy Policy</a>
+    </p>
   <!--</footer>-->
   <!--<p>Contact: Example@gmail.com</p>
   <p> Made by The Fantastic Four! </p>
