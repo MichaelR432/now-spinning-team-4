@@ -170,6 +170,8 @@ var searchGenre = () => {
         currentCard.append(currentName);
         var currentTrack = currentName.append("<p>");
         currentTrack.append("<p>" + "Track Name: " + JSON.stringify(data.tracks.items[a1].data.name) + " by: " + JSON.stringify(data.tracks.items[a1].data.artists.items[0].profile.name) + "</p>");
+        let b1 = JSON.stringify(data.tracks.items[a1].data.name)
+        var locals = localStorage.setItem('Track Title', b1);
     })
 }
 $('.searchBtn').on('click', (event) => {
