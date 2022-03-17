@@ -3,7 +3,7 @@ fetch(api_url, {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "spotfiy-charts.p.rapidapi.com",
-		"x-rapidapi-key": "c313de1ad3msh4602fa283a24682p189403jsn953e0897f524"
+		"x-rapidapi-key": "d8ce2da366mshd3b6ec5f7859622p1073c4jsnbbe80784adaf"
 	}
 })
 .then(response => {
@@ -127,6 +127,7 @@ fetch(requestUrl)
 	.catch((e) => {
 		console.log(e);
 	});
+    
 // Second Spotify API that allows for searching of genre
 
 var keyCount = 0;
@@ -145,7 +146,7 @@ var searchGenre = () => {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "spotify23.p.rapidapi.com",
-		"x-rapidapi-key": "c313de1ad3msh4602fa283a24682p189403jsn953e0897f524"
+		"x-rapidapi-key": "d8ce2da366mshd3b6ec5f7859622p1073c4jsnbbe80784adaf"
 	}
     })
     .then(function (response) {
@@ -169,6 +170,8 @@ var searchGenre = () => {
         currentCard.append(currentName);
         var currentTrack = currentName.append("<p>");
         currentTrack.append("<p>" + "Track Name: " + JSON.stringify(data.tracks.items[a1].data.name) + " by: " + JSON.stringify(data.tracks.items[a1].data.artists.items[0].profile.name) + "</p>");
+        let b1 = JSON.stringify(data.tracks.items[a1].data.name)
+        var locals = localStorage.setItem('Track Title', b1);
     })
 }
 $('.searchBtn').on('click', (event) => {
